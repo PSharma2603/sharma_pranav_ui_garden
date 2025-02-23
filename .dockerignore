@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log
+yarn-error.log
+# Ignore build outputs
+build/
+storybook-static/
+# Ignore Git and environment files
+.git
+.gitignore
+.env
+.DS_Store
