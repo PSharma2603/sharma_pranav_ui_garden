@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import TableFooter from "./TableFooter";
+import { render, screen } from '@testing-library/react';
+import TableFooter from './TableFooter';
 
-test("renders table footer with content", () => {
+test('renders table footer with content', () => {
   render(
     <table>
       <TableFooter>
@@ -9,12 +9,12 @@ test("renders table footer with content", () => {
           <td>Total</td>
         </tr>
       </TableFooter>
-    </table>
+    </table>,
   );
-  expect(screen.getByText("Total")).toBeVisible();
+  expect(screen.getByText('Total')).toBeVisible();
 });
 
-test("table footer should be disabled when disabled prop is true", () => {
+test('table footer should be disabled when disabled prop is true', () => {
   render(
     <table>
       <TableFooter disabled>
@@ -22,9 +22,9 @@ test("table footer should be disabled when disabled prop is true", () => {
           <td>Total</td>
         </tr>
       </TableFooter>
-    </table>
+    </table>,
   );
-  const footer = screen.getByText("Total").parentElement;
-  expect(footer).toHaveStyle("opacity: 0.6");
-  expect(footer).toHaveStyle("cursor: not-allowed");
+  const footer = screen.getByText('Total').parentElement;
+  expect(footer).toHaveStyle('opacity: 0.6');
+  expect(footer).toHaveStyle('cursor: not-allowed');
 });

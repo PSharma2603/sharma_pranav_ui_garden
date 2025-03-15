@@ -1,5 +1,4 @@
 export type TableHeaderProps = {
-    children: React.ReactNode;
-    disabled?: boolean;
-  };
-  
+  children: React.ReactNode;
+  disabled?: boolean;
+};

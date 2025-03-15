@@ -1,5 +1,4 @@
 export type TableFooterProps = {
-    children: React.ReactNode;
-    disabled?: boolean;
-  };
-  
+  children: React.ReactNode;
+  disabled?: boolean;
+};

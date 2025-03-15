@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import TableHeader from "./TableHeader";
+import { render, screen } from '@testing-library/react';
+import TableHeader from './TableHeader';
 
-test("renders table header with content", () => {
+test('renders table header with content', () => {
   render(
     <table>
       <TableHeader>
@@ -9,12 +9,12 @@ test("renders table header with content", () => {
           <th>🏏 Player</th>
         </tr>
       </TableHeader>
-    </table>
+    </table>,
   );
-  expect(screen.getByText("🏏 Player")).toBeVisible();
+  expect(screen.getByText('🏏 Player')).toBeVisible();
 });
 
-test("table header should be disabled when disabled prop is true", () => {
+test('table header should be disabled when disabled prop is true', () => {
   render(
     <table>
       <TableHeader disabled>
@@ -22,9 +22,9 @@ test("table header should be disabled when disabled prop is true", () => {
           <th>🏏 Player</th>
         </tr>
       </TableHeader>
-    </table>
+    </table>,
   );
-  const header = screen.getByText("🏏 Player").parentElement;
-  expect(header).toHaveStyle("opacity: 0.6");
-  expect(header).toHaveStyle("cursor: not-allowed");
+  const header = screen.getByText('🏏 Player').parentElement;
+  expect(header).toHaveStyle('opacity: 0.6');
+  expect(header).toHaveStyle('cursor: not-allowed');
 });

@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export type TextProps = {
   text: string;
@@ -8,11 +8,15 @@ export type TextProps = {
   disabled?: boolean;
 };
 
-const StyledText = styled.p<{ fontSize?: string; color?: string; disabled?: boolean }>`
-  font-size: ${({ fontSize }) => fontSize || "1rem"};
-  color: ${({ color, disabled }) => (disabled ? "#aaa" : color || "black")};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "default")};
-  font-family: "CricketBold", sans-serif; /* Cricket-themed font */
+const StyledText = styled.p<{
+  fontSize?: string;
+  color?: string;
+  disabled?: boolean;
+}>`
+  font-size: ${({ fontSize }) => fontSize || '1rem'};
+  color: ${({ color, disabled }) => (disabled ? '#aaa' : color || 'black')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'default')};
+  font-family: 'CricketBold', sans-serif; /* Cricket-themed font */
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
@@ -21,7 +25,11 @@ const StyledText = styled.p<{ fontSize?: string; color?: string; disabled?: bool
 `;
 
 const Text: React.FC<TextProps> = ({ text, fontSize, color, disabled }) => {
-  return <StyledText fontSize={fontSize} color={color} disabled={disabled}>{text}</StyledText>;
+  return (
+    <StyledText fontSize={fontSize} color={color} disabled={disabled}>
+      {text}
+    </StyledText>
+  );
 };
 
 export default Text;

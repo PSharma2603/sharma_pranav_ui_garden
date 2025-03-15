@@ -1,12 +1,12 @@
-import React from "react";
-import { Meta, StoryFn } from "@storybook/react";
-import TableRow, { TableRowProps } from "./TableRow";
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import TableRow, { TableRowProps } from './TableRow';
 
 export default {
-  title: "Components/TableRow",
+  title: 'Components/TableRow',
   component: TableRow,
   argTypes: {
-    disabled: { control: "boolean" },
+    disabled: { control: 'boolean' },
   },
 } as Meta<typeof TableRow>;
 

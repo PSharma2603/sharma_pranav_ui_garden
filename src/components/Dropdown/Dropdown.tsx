@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 export type DropdownProps = {
   options: string[];
@@ -14,12 +14,12 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
-  background-color: ${({ disabled }) => (disabled ? "black" : "lightblue")};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  background-color: ${({ disabled }) => (disabled ? 'black' : 'lightblue')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: all 0.3s ease;
 
   &:focus {
-    outline: ${({ disabled }) => (disabled ? "none" : "2px solid #007bff")};
+    outline: ${({ disabled }) => (disabled ? 'none' : '2px solid #007bff')};
   }
 
   @media (max-width: 768px) {
@@ -27,7 +27,12 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   }
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ options, selectedOption, onChange, disabled }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  selectedOption,
+  onChange,
+  disabled,
+}) => {
   const [selected, setSelected] = useState(selectedOption || options[0]); // ✅ Maintain selected state
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

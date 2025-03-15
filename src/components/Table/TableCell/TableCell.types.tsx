@@ -1,6 +1,5 @@
 export type TableCellProps = {
-    children: React.ReactNode;
-    isHeader?: boolean;
-    disabled?: boolean;
-  };
-  
+  children: React.ReactNode;
+  isHeader?: boolean;
+  disabled?: boolean;
+};

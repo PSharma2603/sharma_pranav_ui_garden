@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 export type RadioButtonProps = {
   name: string;
@@ -15,19 +15,25 @@ const StyledRadioButton = styled.div<{ $disabled?: boolean }>`
   flex-direction: column;
   gap: 10px;
 
-  input[type="radio"] {
-    cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
+  input[type='radio'] {
+    cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
   }
 
   label {
     font-size: 1rem;
-    cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
-    color: ${({ $disabled }) => ($disabled ? "#aaa" : "#000")};
+    cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
+    color: ${({ $disabled }) => ($disabled ? '#aaa' : '#000')};
   }
 `;
 
-const RadioButton: React.FC<RadioButtonProps> = ({ name, options, selectedOption, onChange, disabled }) => {
-  const [selected, setSelected] = useState(selectedOption || "");
+const RadioButton: React.FC<RadioButtonProps> = ({
+  name,
+  options,
+  selectedOption,
+  onChange,
+  disabled,
+}) => {
+  const [selected, setSelected] = useState(selectedOption || '');
 
   const handleChange = (value: string) => {
     if (!disabled) {

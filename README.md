@@ -6,13 +6,16 @@ The app runs on **http://localhost:8083** using Docker.
 ---
 
 ## **📌 Prerequisites**
+
 Before setting up the application, ensure you have the following installed:
 
 - **Docker**: Download and install Docker
 - **Git** (Optional): Used for cloning the repository
 
 ### **Verify Installations**
+
 Run the following commands to verify installation:
+
 ```bash
 docker --version    # Should return Docker version
 git --version       # Should return Git version
@@ -31,9 +34,10 @@ Docker Environment
 Building Docker image using this command in the terminal
 'docker build -t sharma_pranav_coding_assignment12 .'
 
-then running the container at port 8083 
+then running the container at port 8083
 'docker run -p 8083:6006 --name sharma_pranav_coding_assignment12 sharma_pranav_coding_assignment12' using this command.
 
 Stopping the container:
 'docker stop sharma_pranav_coding_assignment12'
 by using this command
+```

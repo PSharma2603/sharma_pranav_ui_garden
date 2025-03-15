@@ -21,6 +21,10 @@ function App() {
       </header>
     </div>
   );
+  const unusedVariable = "This should trigger an ESLint error";
+  console.log(    "Hello"    );
+
+
 }
 
 export default App;

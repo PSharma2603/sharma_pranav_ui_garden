@@ -1,12 +1,12 @@
-import React from "react";
-import { Meta, StoryFn } from "@storybook/react";
-import TableHeader, { TableHeaderProps } from "./TableHeader";
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import TableHeader, { TableHeaderProps } from './TableHeader';
 
 export default {
-  title: "Components/TableHeader",
+  title: 'Components/TableHeader',
   component: TableHeader,
   argTypes: {
-    disabled: { control: "boolean" },
+    disabled: { control: 'boolean' },
   },
 } as Meta<typeof TableHeader>;
 

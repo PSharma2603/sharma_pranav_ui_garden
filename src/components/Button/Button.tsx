@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 export type ButtonProps = {
   label: string;
@@ -12,15 +12,15 @@ const StyledButton = styled.button<{ clicked: boolean }>`
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   background-color: ${({ disabled, clicked }) =>
-    disabled ? "#ccc" : clicked ? "red" : "#007bff"};
+    disabled ? '#ccc' : clicked ? 'red' : '#007bff'};
   color: white;
   transition: background-color 0.3s ease;
 
   &:hover {
     background-color: ${({ disabled, clicked }) =>
-      disabled ? "#ccc" : clicked ? "darkred" : "#0056b3"};
+      disabled ? '#ccc' : clicked ? 'darkred' : '#0056b3'};
   }
 `;
 

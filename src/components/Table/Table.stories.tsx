@@ -1,12 +1,12 @@
-import React from "react";
-import { Meta, StoryFn } from "@storybook/react";
-import Table from "./Table";
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import Table from './Table';
 
 export default {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
   argTypes: {
-    disabled: { control: "boolean" },
+    disabled: { control: 'boolean' },
   },
 } as Meta<typeof Table>;
 

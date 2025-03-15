@@ -1,12 +1,12 @@
-import React from "react";
-import { Meta, StoryFn } from "@storybook/react";
-import TableFooter, { TableFooterProps } from "./TableFooter";
+import React from 'react';
+import { Meta, StoryFn } from '@storybook/react';
+import TableFooter, { TableFooterProps } from './TableFooter';
 
 export default {
-  title: "Components/TableFooter",
+  title: 'Components/TableFooter',
   component: TableFooter,
   argTypes: {
-    disabled: { control: "boolean" },
+    disabled: { control: 'boolean' },
   },
 } as Meta<typeof TableFooter>;
 

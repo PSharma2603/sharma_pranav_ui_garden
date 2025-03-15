@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export type CardProps = {
   title: string;
@@ -15,11 +15,11 @@ const StyledCard = styled.div<{ disabled?: boolean }>`
   border-radius: 10px;
   overflow: hidden;
   box-shadow: ${({ disabled }) =>
-    disabled ? "none" : "2px 2px 10px rgba(0, 0, 0, 0.1)"};
+    disabled ? 'none' : '2px 2px 10px rgba(0, 0, 0, 0.1)'};
   text-align: center;
-  background-color: ${({ disabled }) => (disabled ? "black" : "white")};
-  opacity: ${({ disabled }) => (disabled ? "0.6" : "1")};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  background-color: ${({ disabled }) => (disabled ? 'black' : 'white')};
+  opacity: ${({ disabled }) => (disabled ? '0.6' : '1')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
@@ -47,7 +47,12 @@ const CardDescription = styled.p`
   color: #666;
 `;
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl, disabled }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  description,
+  imageUrl,
+  disabled,
+}) => {
   return (
     <StyledCard disabled={disabled}>
       {imageUrl && <CardImage src={imageUrl} alt={title} />}
