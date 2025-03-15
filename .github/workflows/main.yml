@@ -3,11 +3,11 @@ name: CI/CD Pipeline for Assignment 13
 on:
   push:
     branches:
-      - assignment-13  # Run on assignment-13 branch
+      - assignment-13 # Run on assignment-13 branch
   pull_request:
     branches:
-      - assignment-13  # Also run when a PR is made to assignment-13
-  workflow_dispatch:  # Allow manual execution
+      - assignment-13 # Also run when a PR is made to assignment-13
+  workflow_dispatch: # Allow manual execution
 
 jobs:
   lint-test-build:
