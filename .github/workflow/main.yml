@@ -3,12 +3,11 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
-      - assignment-13
+      - "*"
   pull_request:
     branches:
-      - main
-      - assignment-13
+      - "*"
+
 
 jobs:
   build-and-test:
