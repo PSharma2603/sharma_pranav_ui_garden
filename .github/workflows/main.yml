@@ -1,0 +1,51 @@
+name: CI/CD Pipeline for Assignment 13
+
+on:
+  push:
+    branches:
+      - assignment-13  # Run on assignment-13 branch
+  pull_request:
+    branches:
+      - assignment-13  # Also run when a PR is made to assignment-13
+  workflow_dispatch:  # Allow manual execution
+
+jobs:
+  lint-test-build:
+    name: Lint, Test, Build & Dockerize
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run ESLint (Linting)
+        run: npm run lint
+
+      - name: Run Prettier (Code Formatting)
+        run: npm run format
+
+      - name: Run Tests with Jest
+        run: npm test
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Setup Docker
+        run: |
+          docker build -t sharma_pranav_coding_assignment13 .
+          docker images
+
+      - name: Run Docker Container
+        run: |
+          docker run -d -p 8018:6006 --name sharma_pranav_coding_assignment13 sharma_pranav_coding_assignment13
+
+      - name: Verify Docker is Running
+        run: docker ps
