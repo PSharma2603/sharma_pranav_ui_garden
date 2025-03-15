@@ -20,7 +20,7 @@ docker --version    # Should return Docker version
 git --version       # Should return Git version
 
 
-Installing the new dependencies by running the following commands 
+Installing the new dependencies by running the following commands
 
 npx husky-init && npm install
 npx husky install
