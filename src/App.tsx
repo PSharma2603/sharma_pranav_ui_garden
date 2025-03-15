@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const testLint = "This will trigger an error" // ← Missing semicolon
+
 function App() {
   return (
     <div className="App">
@@ -21,10 +23,6 @@ function App() {
       </header>
     </div>
   );
-  const unusedVariable = "This should trigger an ESLint error";
-  console.log(    "Hello"    );
-
-
 }
 
 export default App;

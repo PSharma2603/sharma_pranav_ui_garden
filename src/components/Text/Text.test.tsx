@@ -1,7 +1,6 @@
-import React from 'react';  // ✅ Add this line
+import React from 'react'; // ✅ Add this line
 import { render, screen } from '@testing-library/react';
 import Text from './Text';
-
 
 test('renders text with correct content', () => {
   render(<Text text="🏏 Cricket is the heartbeat of millions!" />);

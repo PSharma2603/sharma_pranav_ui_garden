@@ -1,3 +1,4 @@
+import React from 'react';
 export type TextProps = {
   text: string; // ✅ Required cricket-themed text
   fontSize?: string; // ✅ Optional font size

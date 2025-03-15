@@ -1,4 +1,4 @@
-import React from 'react';  // ✅ Add this line
+import React from 'react'; // ✅ Add this line
 import { render, screen } from '@testing-library/react';
 import TableCell from './TableCell';
 
@@ -10,7 +10,7 @@ test('renders a normal table cell', () => {
           <TableCell>🏏 Virat Kohli</TableCell>
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
   expect(screen.getByText('🏏 Virat Kohli')).toBeVisible();
 });
@@ -23,7 +23,7 @@ test('renders a header table cell', () => {
           <TableCell isHeader>🏏 Player</TableCell>
         </tr>
       </thead>
-    </table>
+    </table>,
   );
   expect(screen.getByText('🏏 Player')).toBeVisible();
   expect(screen.getByText('🏏 Player').tagName).toBe('TH');
@@ -37,7 +37,7 @@ test('table cell should be disabled when disabled prop is true', () => {
           <TableCell disabled>🏏 Match Postponed</TableCell>
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
   const cell = screen.getByText('🏏 Match Postponed');
   expect(cell).toHaveStyle('background-color: #f0f0f0');

@@ -1,4 +1,4 @@
-import React from 'react';  // ✅ Add this line
+import React from 'react'; // ✅ Add this line
 import { render, screen } from '@testing-library/react';
 import HeroImage from './HeroImage';
 import heroImageExample from '../../assets/hero_example.jpg';

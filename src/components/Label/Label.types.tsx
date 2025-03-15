@@ -1,3 +1,4 @@
+import React from 'react';
 export type LabelProps = {
   text: string;
   type?: string;

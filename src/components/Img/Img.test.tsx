@@ -1,4 +1,4 @@
-import React from 'react';  // ✅ Add this line
+import React from 'react'; // ✅ Add this line
 import { render, screen } from '@testing-library/react';
 import Img from './Img';
 import exampleImage from '../../assets/ipl.jpeg';
