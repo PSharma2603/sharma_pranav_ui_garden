@@ -1,4 +1,4 @@
-# Dockerized React Component Library - Assignment 12
+# Dockerized React Component Library - Assignment 13
 
 This project is a UI Component Library built using React, Storybook, TypeScript, and follows best development practices with Husky, ESLint, Prettier, and Jest tests. The project is Dockerized and runs inside a container at port 8018, ensuring a production-ready Storybook environment.
 
