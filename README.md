@@ -1,7 +1,6 @@
 # Dockerized React Component Library - Assignment 12
 
-This project demonstrates a **Dockerized React UI Component Library** using **React and Storybook** for **Assignment 12**.  
-The app runs on **http://localhost:8083** using Docker.
+This project is a UI Component Library built using React, Storybook, TypeScript, and follows best development practices with Husky, ESLint, Prettier, and Jest tests. The project is Dockerized and runs inside a container at port 8018, ensuring a production-ready Storybook environment.
 
 ---
 
@@ -20,24 +19,30 @@ Run the following commands to verify installation:
 docker --version    # Should return Docker version
 git --version       # Should return Git version
 
- Overview
-This project is built using React & Storybook and is containerized using Docker.
-The goal is to create a UI Component Library that runs on localhost:8083.
 
-Creating the React Component Library
-Using this command "npx create-react-app sharma_pranav_ui_garden --template typescript" create the project.
+Installing the new dependencies by running the following commands 
+
+npx husky-init && npm install
+npx husky install
+
+npm install --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier
+
 
 Modifications
-Make modifications to the code and add our components to the project.
+Make modifications to the code and adding necessary folders like the .github to the project.
+
+checking if the all the tests are passing.
+npm test
+npm run storybook #running the storybook on port 6006 on the local machine
 
 Docker Environment
 Building Docker image using this command in the terminal
-'docker build -t sharma_pranav_coding_assignment12 .'
+'docker build -t sharma_pranav_coding_assignment13 .'
 
-then running the container at port 8083
-'docker run -p 8083:6006 --name sharma_pranav_coding_assignment12 sharma_pranav_coding_assignment12' using this command.
+then running the container at port 8018
+'docker run -p 8018:6006 --name sharma_pranav_coding_assignment13 sharma_pranav_coding_assignment13' using this command.
 
 Stopping the container:
-'docker stop sharma_pranav_coding_assignment12'
+'docker stop sharma_pranav_coding_assignment13
 by using this command
 ```
